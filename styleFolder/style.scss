@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        background: green;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        opacity: 1;
+        transition: all ease-in .5s;
+        }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        padding: 10px 20px;
+    }
+}
+
+section {
+    text-align: center;
+}
+
+#menu-icon {
+    width: 50px;
+}
+
+.hide {
+    top: -350px;
+    opacity: 0;
+}
+
+.rood {
+    background: red;
+}
+
+.oranje {
+    background: orange;
+}
+
+.geel {
+    background: yellow;
+}
+
+.groen {
+    background: green;
+}
+
+.indigo {
+    background: indigo;
+}
+
+.violet {
+    background: violet;
+}
+
+
+.hamburger-menu {
+    position: relative;
+    height: 75px;
+    width: 75px;
+
+    #hamburger-bar,
+    #hamburger-bar::before,
+    #hamburger-bar::after{
+        position: absolute;
+        height: 10px;
+        width: 50px;
+        background: black;
+        display: block;
+        border-radius: 5px;
+        transition: transform  ease .5s;
+    }
+
+    #hamburger-bar {
+        left: 12px;
+        top: 30px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #hamburger-bar::before,
+    #hamburger-bar::after {
+        content: '';
+    }
+
+    #hamburger-bar::before{
+        top: -20px;
+    }
+
+    #hamburger-bar::after{
+        top:20px;
+    }
+
+    #hamburger-bar{    
+        &.select::before{
+            transform: rotate(45deg) !important;
+            top: 0 !important;
+        }
+        
+        &.select::after{
+            transform: rotate(-45deg);
+            top: 0;
+        }
+        
+        &.select {
+            background:transparent; }}
+}
+
+label #rood {
+    color: red;
+    background: red($color: #000000);
+}
+
+
+
